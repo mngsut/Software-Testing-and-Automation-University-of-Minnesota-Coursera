@@ -1,0 +1,39 @@
+1. First, think about what you tested in this JMeter exercise. What does the response time of each test mean to us?
+    GOOD 5m38s
+    
+    Correct
+    We are actually testing the speed of our written tests. Rather than running performance tests on the software under test, we are using JMeter to run performance 
+    tests on our testing of the software.
+
+2. What was the response time on average for the "google speed test" test?
+    83.354s
+
+    Correct
+    This number could differ based on multiple factors.
+
+3. What was the response time on average for the "calculator" test?
+    32.32s
+
+    Correct
+    This number could differ based on multiple factors.
+
+4. What factors do you think influenced the response time of your tests?
+    internet speed
+
+    Correct
+    Connection speed, processor speed, and background process load are some good answers. See if you can think of any others.
+
+5. Study the (above/below) graph of the "google speed test" test running on a machine. Why do you think some response times on the graph are drastically different?
+    response times on the graph are drastically different because of network speed variation as per ISP or slow process of individual's computer
+
+    Correct
+    The google speed test is a flaky test itself and sometimes fails to return a proper response. These failures are eventually taken into account by our own test 
+    which can cause the test to end later than a successful test would end.
+
+6. How could you make our performance test of the google speed test more robust such that it recognizes failures of the software under test faster?
+    performance test of the google speed test can be made more robust by testing the application output, processing speed, memory utilization. Command response 
+    time and network bandwidth
+
+    Correct
+    A good suggestion would be to check for a failure sooner in this case. The google speed test still takes time to run successfully so our test was left like this 
+    to ensure that false negatives did not occur.
